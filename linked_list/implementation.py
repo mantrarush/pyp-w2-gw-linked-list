@@ -106,10 +106,11 @@ class LinkedList(AbstractLinkedList):
         
         if self.start is None: 
             raise IndexError("Nothing in the list")
-        if size<=index:
-            raise IndexError("index exceeds size")
         if index is None and size != 0:
             index = size-1 
+        if size<=index:
+            raise IndexError("index exceeds size")
+        
     
         if index == 0: 
             temp_elem = self.start.elem
